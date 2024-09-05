@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Composer Plugin
+ * Plugin Name: WordPress Eloquent ORM
  * Description: A single-page WordPress plugin with Composer support and testing.
  * Version: 1.0.0
  * Author: Your Name
