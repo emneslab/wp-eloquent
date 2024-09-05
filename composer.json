@@ -1,0 +1,20 @@
+{
+    "name": "emneslab/composer-plugin",
+    "autoload": {
+        "psr-4": {
+            "Emneslab\\ORM\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emnes Lab",
+            "email": "lab@emnes.co"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^7.1",
+        "illuminate/database": "11.22.0",
+        "illuminate/pagination": "11.22.0",
+        "laravel/serializable-closure": "^1.3"
+    }
+}
