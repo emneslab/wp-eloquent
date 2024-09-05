@@ -1,7 +1,7 @@
 
 # Eloquent Wrapper for WordPress by Emneslab
 
-This library package allows you to use Laravel's [Eloquent ORM](http://laravel.com/docs/5.0/eloquent) seamlessly within WordPress, extending the capabilities of WordPress' native database handling.
+This library package allows you to use Laravel's [Eloquent ORM](https://laravel.com/docs/11.x/eloquent) seamlessly within WordPress, extending the capabilities of WordPress' native database handling.
 
 ## Package Installation
 
@@ -111,8 +111,8 @@ Schema::create('test_database_table', function (Blueprint $table) {
 
 ## Minimum Requirements
 
-- PHP 5.6.4+
-- WordPress 4.0+
+- PHP >= 7.2
+- WordPress >= 6.2
 
 ## Author
 
