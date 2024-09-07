@@ -10,7 +10,7 @@ To install this package, update your `composer.json` file as follows:
 ```json
 {
     "require": {
-        "emneslab/wp-eloquent": "dev-master"
+        "emneslab/wp-eloquent": "dev-main"
     }
 }
 ```
@@ -64,7 +64,7 @@ You can define models for custom WordPress tables, making use of Eloquent featur
 <?php
 namespace CustomNamespace;
 
-use Emneslab\ORM\Eloquent\Model;
+use Emneslab\ORM\Database\Eloquent\Model;
 
 class CustomTableModel extends Model {
     protected $table = 'custom_table_name';
@@ -76,8 +76,7 @@ class CustomTableModel extends Model {
     public function getTable()
     {
         if (isset($this->table)) {
-            $prefix = $this->getConnection()->db->prefix;
-            return $prefix . $this->table;
+            return $this->getConnection()->getTablePrefix() . $this->table;
         }
 
         return parent::getTable();
