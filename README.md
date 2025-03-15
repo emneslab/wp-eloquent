@@ -93,7 +93,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Emneslab\ORM\Support\Facades\Schema;
 
 // Dropping a table
-Schema::drop('wp_test_database_table');
+Schema::drop('test_database_table');
 
 // Creating a new table
 Schema::create('test_database_table', function (Blueprint $table) {
