@@ -43,4 +43,36 @@ class Builder extends \Illuminate\Database\Schema\MySqlBuilder
             $callback($blueprint);
         }));
     }
+    
+    /**
+     * Drop a table from the schema.
+     *
+     * @param  string  $table
+     * @return void
+     */
+    public function drop($table)
+    {
+        // Prepend the table prefix to the table name to ensure consistency with WordPress standards
+        $table = $this->connection->getTablePrefix() . $table;
+
+        $this->build(tap($this->createBlueprint($table), function ($blueprint) {
+            $blueprint->drop();
+        }));
+    }
+
+    /**
+     * Drop a table from the schema if it exists.
+     *
+     * @param  string  $table
+     * @return void
+     */
+    public function dropIfExists($table)
+    {
+        // Prepend the table prefix to the table name to ensure consistency with WordPress standards
+        $table = $this->connection->getTablePrefix() . $table;
+        
+        $this->build(tap($this->createBlueprint($table), function ($blueprint) {
+            $blueprint->dropIfExists();
+        }));
+    }
 }
